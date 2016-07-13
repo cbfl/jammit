@@ -9,20 +9,23 @@ module Jammit
 
     # Mapping from extension to mime-type of all embeddable assets.
     EMBED_MIME_TYPES = {
-      '.png'  => 'image/png',
-      '.jpg'  => 'image/jpeg',
-      '.jpeg' => 'image/jpeg',
-      '.gif'  => 'image/gif',
-      '.tif'  => 'image/tiff',
-      '.tiff' => 'image/tiff',
-      '.ttf'  => 'application/x-font-ttf',
-      '.otf'  => 'font/opentype',
-      '.woff' => 'application/x-font-woff'
+      '.png'   => 'image/png',
+      '.jpg'   => 'image/jpeg',
+      '.jpeg'  => 'image/jpeg',
+      '.gif'   => 'image/gif',
+      '.tif'   => 'image/tiff',
+      '.tiff'  => 'image/tiff',
+      '.ttf'   => 'application/x-font-ttf',
+      '.otf'   => 'font/opentype',
+      '.woff'  => 'application/x-font-woff',
+      '.woff2' => 'application/x-font-woff2',
+      '.eot'   => 'application/vnd.ms-fontobject',
+      '.svg'   => 'application/svg+xml'
     }
 
     # Font extensions for which we allow embedding:
     EMBED_EXTS      = EMBED_MIME_TYPES.keys
-    EMBED_FONTS     = ['.ttf', '.otf', '.woff']
+    EMBED_FONTS     = ['.ttf', '.otf', '.woff', '.woff2', '.eot', '.svg']
 
     # (32k - padding) maximum length for data-uri assets (an IE8 limitation).
     MAX_IMAGE_SIZE  = 32700
